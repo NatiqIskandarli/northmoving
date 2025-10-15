@@ -127,14 +127,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased`} style={{minHeight: '100vh'}}>
         <Header />
-        <main className="min-h-screen">
+        <main className="min-h-screen" style={{contentVisibility: 'auto'}}>
           {children}
         </main>
         <Footer />
