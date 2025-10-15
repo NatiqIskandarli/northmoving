@@ -455,7 +455,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden" style={{minHeight: '600px'}}>
+      <section className="relative flex items-center overflow-hidden" style={{minHeight: 'calc(100vh - 180px)', height: 'calc(100vh - 180px)'}}>
         {/* Background Slideshow */}
         <div className="absolute inset-0 z-0">
           {heroSlides.map((slide, index) => (
@@ -473,8 +473,9 @@ export default function HomePage() {
                 priority={index === 0}
                 fetchPriority={index === 0 ? "high" : "auto"}
                 sizes="100vw"
+                quality={index === 0 ? 75 : 60}
               />
-              <div className="absolute inset-0 bg-black/40" style={{willChange: 'auto'}}></div>
+              <div className="absolute inset-0 bg-black/40"></div>
             </div>
           ))}
         </div>
@@ -775,9 +776,10 @@ export default function HomePage() {
                     src={item.image}
                     alt={item.alt}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     loading={index < 6 ? "eager" : "lazy"}
+                    quality={index < 6 ? 65 : 55}
                     itemProp="contentUrl"
                   />
                   <meta itemProp="name" content={item.title} />
