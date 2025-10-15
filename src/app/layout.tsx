@@ -25,6 +25,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://northmoving.ca",
   },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }
+    ],
+  },
   openGraph: {
     title: "NorthMoving.ca - Trusted GTA Movers | Professional Moving Services",
     description: "Professional moving services in Toronto and GTA. Get a free quote from licensed, insured movers.",
@@ -63,7 +72,7 @@ export default function RootLayout({
     "description": "Professional moving services in Toronto and Greater Toronto Area. Licensed, insured, and experienced movers.",
     "url": "https://northmoving.ca",
     "logo": "https://northmoving.ca/logo.png",
-          "telephone": "+1-437-871-2382",
+          "telephone": "+1-437-871-9288",
     "email": "info@northmoving.ca",
     "address": {
       "@type": "PostalAddress",

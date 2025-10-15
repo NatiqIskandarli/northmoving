@@ -462,7 +462,7 @@ export default function BlogPage() {
             
             <div className="mt-8 pt-8 border-t border-gray-200">
               <p className="text-gray-600">
-                <strong>Special Offer:</strong> First 3 hours for $540+HST (save $90!) for new customers
+                <strong>Get Started:</strong> Request your free custom quote today - transparent pricing tailored to your needs
               </p>
             </div>
           </div>

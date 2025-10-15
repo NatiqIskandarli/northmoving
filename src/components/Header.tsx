@@ -19,8 +19,8 @@ const Header = () => {
   ];
 
   const contactInfo = {
-    phone: '+14378712382',
-    phoneDisplay: '+1 (437) 871-2382',
+    phone: '+14378719288',
+    phoneDisplay: '+1 (437) 871-9288',
     email: 'move@northmoving.ca',
     hours: '7 days a week!'
   };

@@ -66,7 +66,7 @@ export default function FAQPage() {
     {
       category: 'pricing',
       question: 'How much does a move cost with NorthMoving.ca?',
-      answer: 'Our standard rate is $150/hour for a team of professional movers. We offer a special promotion for new customers: first 3 hours for $540+HST (save $90!). The final cost depends on the size of your move, distance, and any additional services required.'
+      answer: 'We provide customized quotes based on your specific moving requirements including the size of your move, distance, and any additional services needed. Contact us for a free, no-obligation quote tailored to your situation. Our pricing is transparent with no hidden fees.'
     },
     {
       category: 'pricing',
@@ -217,9 +217,9 @@ export default function FAQPage() {
               <Link href="/quote" className="btn-primary text-lg px-8 py-4">
                 Get Your Free Quote
               </Link>
-                          <a href="tel:+14378712382" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
+                          <a href="tel:+14378719288" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
               <Phone className="h-5 w-5" />
-              <span>Call +1 (437) 871-2382</span>
+              <span>Call +1 (437) 871-9288</span>
             </a>
             </div>
           </div>
@@ -317,7 +317,7 @@ export default function FAQPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+14378712382" 
+                href="tel:+14378719288" 
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />

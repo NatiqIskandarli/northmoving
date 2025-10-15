@@ -108,9 +108,9 @@ export default function SpecialtyMovingPage() {
               <Link href="/quote" className="btn-primary text-lg px-8 py-4">
                 Get Free Quote
               </Link>
-              <a href="tel:+14378712382" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
+              <a href="tel:+14378719288" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call +1 (437) 871-2382</span>
+                <span>Call +1 (437) 871-9288</span>
               </a>
             </div>
           </div>
@@ -188,7 +188,7 @@ export default function SpecialtyMovingPage() {
                 <Link href="/quote" className="btn-primary w-full text-center">
                   Get Specialty Quote
                 </Link>
-                                  <a href="tel:+14378712382" className="btn-outline w-full text-center flex items-center justify-center space-x-2">
+                                  <a href="tel:+14378719288" className="btn-outline w-full text-center flex items-center justify-center space-x-2">
                     <Phone className="h-5 w-5" />
                     <span>Call Now</span>
                   </a>
@@ -241,9 +241,9 @@ export default function SpecialtyMovingPage() {
               <Link href="/quote" className="btn-white text-lg px-8 py-4">
                 Get Specialty Quote
               </Link>
-              <a href="tel:+14378712382" className="btn-outline-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
+              <a href="tel:+14378719288" className="btn-outline-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call +1 (437) 871-2382</span>
+                <span>Call +1 (437) 871-9288</span>
               </a>
             </div>
           </div>

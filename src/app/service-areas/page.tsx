@@ -102,9 +102,9 @@ export default function ServiceAreasPage() {
               <Link href="/quote" className="btn-primary text-lg px-8 py-4">
                 Get Free Quote for Your Area
               </Link>
-                          <a href="tel:+14378712382" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
+                          <a href="tel:+14378719288" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
               <Phone className="h-5 w-5" />
-              <span>Call +1 (437) 871-2382</span>
+              <span>Call +1 (437) 871-9288</span>
             </a>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function ServiceAreasPage() {
                 <strong>Don't see your area?</strong> We may still be able to help! 
                 Contact us to discuss service availability in your location.
               </p>
-                              <a href="tel:+14378712382" className="btn-primary">
+                              <a href="tel:+14378719288" className="btn-primary">
                   Call to Confirm Service
                 </a>
             </div>
@@ -344,9 +344,9 @@ export default function ServiceAreasPage() {
               <Link href="/quote" className="btn-primary text-lg px-8 py-4">
                 Get Area-Specific Quote
               </Link>
-                          <a href="tel:+14378712382" className="btn-outline text-lg px-8 py-4 flex items-center justify-center space-x-2">
+                          <a href="tel:+14378719288" className="btn-outline text-lg px-8 py-4 flex items-center justify-center space-x-2">
               <Phone className="h-5 w-5" />
-              <span>Call +1 (437) 871-2382</span>
+              <span>Call +1 (437) 871-9288</span>
             </a>
             </div>
           </div>

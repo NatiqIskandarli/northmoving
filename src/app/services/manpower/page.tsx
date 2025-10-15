@@ -108,9 +108,9 @@ export default function ManpowerOnlyPage() {
               <Link href="/quote" className="btn-primary text-lg px-8 py-4">
                 Get Free Quote
               </Link>
-              <a href="tel:+14378712382" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
+              <a href="tel:+14378719288" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call +1 (437) 871-2382</span>
+                <span>Call +1 (437) 871-9288</span>
               </a>
             </div>
           </div>
@@ -188,7 +188,7 @@ export default function ManpowerOnlyPage() {
                 <Link href="/quote" className="btn-primary w-full text-center">
                   Get Manpower Quote
                 </Link>
-                                  <a href="tel:+14378712382" className="btn-outline w-full text-center flex items-center justify-center space-x-2">
+                                  <a href="tel:+14378719288" className="btn-outline w-full text-center flex items-center justify-center space-x-2">
                     <Phone className="h-5 w-5" />
                     <span>Call Now</span>
                   </a>
@@ -230,18 +230,18 @@ export default function ManpowerOnlyPage() {
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="heading-2 mb-6">Transparent Hourly Pricing</h2>
+            <h2 className="heading-2 mb-6">Flexible Crew Size Options</h2>
             <p className="text-lead mb-12">
-              No hidden fees, no surprises. You pay only for the time our crew works.
+              We tailor the team size to your specific needs. Get a custom quote for your project.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">2 Movers</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">$120<span className="text-lg text-gray-600">/hour</span></div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">Small Crew</div>
                 <p className="text-gray-600 mb-6">Perfect for smaller jobs and apartment moves</p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• 2-hour minimum</li>
+                  <li>• Minimum time applies</li>
                   <li>• Basic moving equipment</li>
                   <li>• Loading/unloading help</li>
                 </ul>
@@ -249,10 +249,10 @@ export default function ManpowerOnlyPage() {
               
               <div className="bg-blue-600 text-white rounded-xl shadow-lg p-8 transform scale-105">
                 <h3 className="text-xl font-bold mb-4">3 Movers</h3>
-                <div className="text-3xl font-bold mb-4">$165<span className="text-lg text-blue-100">/hour</span></div>
+                <div className="text-3xl font-bold mb-4">Medium Crew</div>
                 <p className="text-blue-100 mb-6">Most popular for house moves</p>
                 <ul className="text-sm text-blue-100 space-y-2">
-                  <li>• 2-hour minimum</li>
+                  <li>• Minimum time applies</li>
                   <li>• Full moving equipment</li>
                   <li>• Heavy item specialists</li>
                 </ul>
@@ -260,14 +260,23 @@ export default function ManpowerOnlyPage() {
               
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">4+ Movers</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">$200<span className="text-lg text-gray-600">/hour</span></div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">Large Crew</div>
                 <p className="text-gray-600 mb-6">For large homes and commercial jobs</p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• 2-hour minimum</li>
+                  <li>• Minimum time applies</li>
                   <li>• Specialized equipment</li>
                   <li>• Team coordination</li>
                 </ul>
               </div>
+            </div>
+            
+            <div className="mt-12">
+              <p className="text-gray-600 mb-6">
+                Contact us for personalized pricing based on your crew size needs and job requirements
+              </p>
+              <Link href="/quote" className="btn-primary text-lg px-8 py-4">
+                Request Your Custom Quote
+              </Link>
             </div>
           </div>
         </div>
@@ -288,9 +297,9 @@ export default function ManpowerOnlyPage() {
               <Link href="/quote" className="btn-white text-lg px-8 py-4">
                 Book Manpower Service
               </Link>
-              <a href="tel:+14378712382" className="btn-outline-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
+              <a href="tel:+14378719288" className="btn-outline-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call +1 (437) 871-2382</span>
+                <span>Call +1 (437) 871-9288</span>
               </a>
             </div>
           </div>

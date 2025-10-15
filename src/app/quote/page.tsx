@@ -174,8 +174,8 @@ export default function QuotePage() {
               Thank you for your quote request. We'll review your information and get back to you within 2 hours with a detailed estimate.
             </p>
             <div className="space-y-4">
-              <a href="tel:+14378712382" className="btn-primary w-full text-center block">
-                Call Us Now: +1 (437) 871-2382
+              <a href="tel:+14378719288" className="btn-primary w-full text-center block">
+                Call Us Now: +1 (437) 871-9288
               </a>
               <button 
                 onClick={() => {
@@ -945,9 +945,9 @@ export default function QuotePage() {
               Our moving consultants are standing by to assist you with your quote.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14378712382" className="btn-primary flex items-center justify-center space-x-2">
+              <a href="tel:+14378719288" className="btn-primary flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call +1 (437) 871-2382</span>
+                <span>Call +1 (437) 871-9288</span>
               </a>
               <a href="mailto:info@northmoving.ca" className="btn-outline flex items-center justify-center space-x-2">
                 <Mail className="h-5 w-5" />

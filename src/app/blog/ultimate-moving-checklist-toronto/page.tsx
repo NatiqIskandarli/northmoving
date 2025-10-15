@@ -312,13 +312,13 @@ export default function BlogPostPage() {
                   <Link href="/quote" className="btn-primary px-8 py-3">
                     Get Free Quote
                   </Link>
-                              <a href="tel:+14378712382" className="btn-secondary px-8 py-3 flex items-center justify-center space-x-2">
+                              <a href="tel:+14378719288" className="btn-secondary px-8 py-3 flex items-center justify-center space-x-2">
               <Phone className="h-5 w-5" />
-              <span>Call +1 (437) 871-2382</span>
+              <span>Call +1 (437) 871-9288</span>
             </a>
                 </div>
                 <p className="text-sm text-gray-500 mt-4">
-                  <strong>Special Offer:</strong> First 3 hours for $540+HST (save $90!)
+                  <strong>Free Quote:</strong> Get personalized pricing for your move today
                 </p>
               </div>
             </div>

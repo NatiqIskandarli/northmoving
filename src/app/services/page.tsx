@@ -211,9 +211,9 @@ export default function ServicesPage() {
               <Link href="/quote" className="btn-primary text-lg px-8 py-4">
                 Get Free Quote
               </Link>
-                          <a href="tel:+14378712382" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
+                          <a href="tel:+14378719288" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center space-x-2">
               <Phone className="h-5 w-5" />
-              <span>Call +1 (437) 871-2382</span>
+              <span>Call +1 (437) 871-9288</span>
             </a>
             </div>
           </div>
@@ -274,10 +274,10 @@ export default function ServicesPage() {
             </div>
             
             <div className="text-center">
-              <div className="bg-orange-600 rounded-lg p-6">
-                <h3 className="text-2xl font-bold mb-2">Special Offer</h3>
-                <p className="text-orange-100">
-                  First 3 hours for just $540+HST (includes 2 movers + truck)
+              <div className="bg-blue-700 rounded-lg p-6">
+                <h3 className="text-2xl font-bold mb-2">Custom Quotes</h3>
+                <p className="text-blue-100">
+                  Get personalized pricing based on your specific moving needs
                 </p>
               </div>
             </div>
@@ -364,9 +364,9 @@ export default function ServicesPage() {
               <Link href="/quote" className="btn-primary text-lg px-8 py-4">
                 Get Detailed Quote
               </Link>
-                          <a href="tel:+14378712382" className="btn-outline text-lg px-8 py-4 flex items-center justify-center space-x-2">
+                          <a href="tel:+14378719288" className="btn-outline text-lg px-8 py-4 flex items-center justify-center space-x-2">
               <Phone className="h-5 w-5" />
-              <span>Call +1 (437) 871-2382</span>
+              <span>Call +1 (437) 871-9288</span>
             </a>
             </div>
           </div>

@@ -181,41 +181,270 @@ export default function HomePage() {
 
   const workGallery = [
     {
-      image: "/images/gallery/residential-move-1.jpg",
-      alt: "Professional movers loading household items into truck",
-      title: "Residential Moving",
-      description: "Careful handling of family belongings"
+      image: "/images/gallery/toronto-movers-truck-ready-service.jpg",
+      alt: "Toronto movers with truck ready for professional moving service",
+      title: "Professional Moving Service",
+      description: "Ready to serve you"
     },
     {
-      image: "/images/gallery/office-relocation-1.jpg", 
-      alt: "Office furniture being moved by professional team",
-      title: "Office Relocation",
-      description: "Efficient business moving services"
+      image: "/images/gallery/professional-furniture-moving-toronto.jpg",
+      alt: "Professional furniture moving service in Toronto and GTA",
+      title: "Expert Furniture Moving",
+      description: "Specialized furniture care"
     },
     {
-      image: "/images/gallery/piano-moving-1.jpg",
-      alt: "Specialized piano moving with protective equipment",
-      title: "Piano Moving",
-      description: "Expert handling of specialty items"
+      image: "/images/gallery/gta-residential-moving-experts.jpg",
+      alt: "GTA residential moving experts providing quality service",
+      title: "Residential Moving Experts",
+      description: "Trusted home movers"
     },
     {
-      image: "/images/gallery/packing-service-1.jpg",
-      alt: "Professional packing of fragile items",
-      title: "Packing Services", 
-      description: "Secure packing for safe transport"
+      image: "/images/gallery/secure-loading-professional-movers.jpg",
+      alt: "Secure loading techniques by professional Toronto movers",
+      title: "Secure Loading Service",
+      description: "Safe and efficient loading"
     },
     {
-      image: "/images/gallery/truck-loading-1.jpg",
-      alt: "Moving truck being loaded with furniture",
-      title: "Professional Loading",
-      description: "Organized and efficient loading"
+      image: "/images/gallery/moving-service-quality-assurance.jpg",
+      alt: "Quality assured moving service in Toronto and GTA",
+      title: "Quality Assurance",
+      description: "Premium service guaranteed"
     },
     {
-      image: "/images/gallery/team-work-1.jpg",
-      alt: "Moving team working together",
-      title: "Teamwork",
-      description: "Coordinated professional service"
-    }
+      image: "/images/gallery/experienced-moving-team-gta.jpg",
+      alt: "Experienced professional moving team serving GTA area",
+      title: "Experienced Team",
+      description: "Years of moving expertise"
+    },
+    {
+      image: "/images/gallery/professional-moving-service-toronto.jpg",
+      alt: "Professional moving service with quality care in Toronto",
+      title: "Professional Service",
+      description: "Excellence in every move"
+    },
+    {
+      image: "/images/gallery/moving-truck-residential-service-toronto.jpg",
+      alt: "Moving truck ready for residential service in Toronto area",
+      title: "Residential Moving Truck",
+      description: "Fully equipped for your move"
+    },
+    {
+      image: "/images/gallery/professional-movers-team-loading-gta.jpg",
+      alt: "Professional movers team loading furniture in GTA",
+      title: "Expert Moving Team",
+      description: "Skilled professionals at work"
+    },
+    {
+      image: "/images/gallery/furniture-moving-service-toronto-area.jpg",
+      alt: "Furniture moving service providing quality care in Toronto area",
+      title: "Quality Furniture Moving",
+      description: "Careful furniture handling"
+    },
+    {
+      image: "/images/gallery/commercial-moving-office-relocation.jpg",
+      alt: "Commercial moving and office relocation services in Toronto",
+      title: "Commercial Moving Service",
+      description: "Business relocation experts"
+    },
+    {
+      image: "/images/gallery/piano-specialty-moving-toronto.jpg",
+      alt: "Piano and specialty item moving in Toronto with expert care",
+      title: "Piano Moving Specialists",
+      description: "Specialty item experts"
+    },
+    {
+      image: "/images/gallery/packing-materials-professional-service.jpg",
+      alt: "Professional packing materials and service in GTA",
+      title: "Professional Packing Materials",
+      description: "Quality packing supplies"
+    },
+    {
+      image: "/images/gallery/moving-boxes-organized-delivery.jpg",
+      alt: "Moving boxes organized for efficient delivery in Toronto",
+      title: "Organized Box Delivery",
+      description: "Systematic box handling"
+    },
+    {
+      image: "/images/gallery/household-items-careful-transport.jpg",
+      alt: "Household items transported with care by Toronto movers",
+      title: "Careful Item Transport",
+      description: "Safe household moving"
+    },
+    {
+      image: "/images/gallery/residential-moving-truck-loaded.jpg",
+      alt: "Residential moving truck professionally loaded in GTA",
+      title: "Professional Truck Loading",
+      description: "Expert loading service"
+    },
+    {
+      image: "/images/gallery/professional-packing-service-gta.jpg",
+      alt: "Professional packing service for safe moving in GTA",
+      title: "Expert Packing Service",
+      description: "Professional packing help"
+    },
+    {
+      image: "/images/gallery/moving-team-working-together.jpg",
+      alt: "Moving team working together efficiently in Toronto",
+      title: "Teamwork Excellence",
+      description: "Coordinated moving service"
+    },
+    {
+      image: "/images/gallery/furniture-protection-moving-blankets.jpg",
+      alt: "Furniture protected with quality moving blankets in Toronto",
+      title: "Furniture Protection Service",
+      description: "Premium protection methods"
+    },
+    {
+      image: "/images/gallery/truck-interior-organized-loading.jpg",
+      alt: "Truck interior showing organized loading by Toronto professionals",
+      title: "Organized Loading Methods",
+      description: "Strategic truck packing"
+    },
+    {
+      image: "/images/gallery/moving-equipment-professional-tools.jpg",
+      alt: "Professional moving equipment and tools used in GTA",
+      title: "Professional Moving Equipment",
+      description: "Industry-standard tools"
+    },
+    {
+      image: "/images/gallery/residential-relocation-complete-service.jpg",
+      alt: "Complete residential relocation service in Toronto area",
+      title: "Complete Relocation Service",
+      description: "Full-service moving"
+    },
+    {
+      image: "/images/gallery/moving-crew-experienced-professionals.jpg",
+      alt: "Experienced professional moving crew serving Toronto and GTA",
+      title: "Experienced Moving Crew",
+      description: "Trusted professionals"
+    },
+    {
+      image: "/images/gallery/household-moving-careful-handling.jpg",
+      alt: "Household items moved with careful handling in Toronto",
+      title: "Careful Handling Service",
+      description: "Attention to detail"
+    },
+    {
+      image: "/images/gallery/professional-loading-techniques-toronto.jpg",
+      alt: "Professional loading techniques demonstrated by Toronto movers",
+      title: "Professional Loading Techniques",
+      description: "Expert methods applied"
+    },
+    {
+      image: "/images/gallery/moving-services-gta-residential.jpg",
+      alt: "Residential moving services throughout GTA and Toronto",
+      title: "GTA Residential Moving",
+      description: "Serving all GTA areas"
+    },
+    {
+      image: "/images/gallery/furniture-transport-safe-delivery.jpg",
+      alt: "Furniture transport with safe delivery guaranteed in Toronto",
+      title: "Safe Furniture Delivery",
+      description: "Guaranteed safe transport"
+    },
+    {
+      image: "/images/gallery/photos_professional-moving-team-street.jpg",
+      alt: "Professional Toronto moving team ready for residential service on city street",
+      title: "Our Professional Team",
+      description: "Experienced movers ready to help"
+    },
+    {
+      image: "/images/gallery/photos_professional-team-cobblestone.jpg",
+      alt: "Moving team working efficiently on cobblestone street in Toronto",
+      title: "Expert Team in Action",
+      description: "Professional service anywhere"
+    },
+    {
+      image: "/images/gallery/photos_complete-household-loading.jpg",
+      alt: "Complete household furniture and items being loaded into moving truck in Toronto",
+      title: "Complete Household Moving",
+      description: "Full-service residential moves"
+    },
+    {
+      image: "/images/gallery/photos_furniture-protection-blue-wrap.jpg",
+      alt: "Furniture wrapped in protective blue moving blankets by Toronto professionals",
+      title: "Premium Furniture Protection",
+      description: "Quality protective materials"
+    },
+    {
+      image: "/images/gallery/photos_residential-furniture-loading.jpg",
+      alt: "Residential furniture carefully loaded by experienced Toronto movers",
+      title: "Safe Furniture Loading",
+      description: "Expert handling techniques"
+    },
+    {
+      image: "/images/gallery/photos_sofa-protection-indoor-wrapping.jpg",
+      alt: "Sofa being professionally wrapped indoors for safe transportation in GTA",
+      title: "Indoor Furniture Wrapping",
+      description: "On-site protection services"
+    },
+    {
+      image: "/images/gallery/photos_truck-loading-organized-interior.jpg",
+      alt: "Well-organized moving truck interior showing professional loading methods Toronto",
+      title: "Organized Truck Loading",
+      description: "Strategic space utilization"
+    },
+    {
+      image: "/images/gallery/photos_professional-box-organization.jpg",
+      alt: "Moving boxes professionally organized and labeled by Toronto moving company",
+      title: "Professional Box Organization",
+      description: "Systematic packing approach"
+    },
+    {
+      image: "/images/gallery/photos_appliance-moving-expertise.jpg",
+      alt: "Appliances moved with specialized equipment by Toronto professional movers",
+      title: "Appliance Moving Services",
+      description: "Safe appliance transportation"
+    },
+    {
+      image: "/images/gallery/photos_wooden-furniture-protection.jpg",
+      alt: "Wooden furniture protected with moving blankets in Toronto by experienced team",
+      title: "Wood Furniture Care",
+      description: "Special care for valuables"
+    },
+    {
+      image: "/images/gallery/photos_comprehensive-truck-organization.jpg",
+      alt: "Comprehensive truck organization showing efficient loading strategy in GTA",
+      title: "Efficient Loading Strategy",
+      description: "Maximum space optimization"
+    },
+    {
+      image: "/images/gallery/photos_residential-loading-truck-ramp.jpg",
+      alt: "Furniture loaded using professional truck ramp by Toronto moving specialists",
+      title: "Safe Ramp Loading",
+      description: "Equipment for safe transport"
+    },
+    {
+      image: "/images/gallery/photos_specialty-furniture-yellow-wrap.jpg",
+      alt: "Specialty furniture wrapped in protective yellow material by GTA movers",
+      title: "Specialty Item Protection",
+      description: "Custom wrapping solutions"
+    },
+    {
+      image: "/images/gallery/photos_armchair-professional-wrapping.jpg",
+      alt: "Armchair wrapped professionally with protective materials by Toronto movers",
+      title: "Furniture Wrapping Expertise",
+      description: "Careful protection for all items"
+    },
+    {
+      image: "/images/gallery/photos_boxes-organized-transport.jpg",
+      alt: "Moving boxes organized and ready for efficient transport in GTA",
+      title: "Organized Box Transport",
+      description: "Systematic loading process"
+    },
+    {
+      image: "/images/gallery/photos_electronics-mattress-loading.jpg",
+      alt: "Electronics and mattresses carefully loaded by professional Toronto movers",
+      title: "Electronics & Mattress Moving",
+      description: "Safe handling of delicate items"
+    },
+    {
+      image: "/images/gallery/photos_furniture-secure-stacking.jpg",
+      alt: "Furniture securely stacked in moving truck using professional techniques",
+      title: "Secure Furniture Stacking",
+      description: "Expert stacking for safety"
+    },
+   
   ];
 
   const serviceAreas = [
@@ -330,28 +559,28 @@ export default function HomePage() {
                   <Link href="/quote" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
                     GET YOUR FREE MOVING QUOTE
                   </Link>
-                  <a href="tel:+14378712382" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-lg text-lg flex items-center justify-center space-x-2 backdrop-blur-sm border border-white/20 transition-colors">
+                  <a href="tel:+14378719288" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-lg text-lg flex items-center justify-center space-x-2 backdrop-blur-sm border border-white/20 transition-colors">
                     <Phone className="h-5 w-5" />
-                    <span>CALL US NOW: +1 (437) 871-2382</span>
+                    <span>CALL US NOW: +1 (437) 871-9288</span>
                   </a>
                 </div>
               </div>
 
               <div className="lg:pl-8">
-                {/* Special Offer Box */}
-                <div className="bg-white rounded-xl shadow-xl p-8 border-2 border-orange-200">
+                {/* Get Quote Box */}
+                <div className="bg-white rounded-xl shadow-xl p-8 border-2 border-blue-200">
                   <div className="text-center mb-6">
-                    <div className="inline-block bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
-                      🎉 SPECIAL INTRODUCTORY OFFER
+                    <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                      ⭐ GET YOUR CUSTOM QUOTE
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      First 3 Hours for Just
+                      Professional Moving Services
                     </h3>
-                    <div className="text-4xl font-bold text-orange-600 mb-2">
-                      $540<span className="text-lg text-gray-600">+HST</span>
-                    </div>
+                    <p className="text-lg text-blue-600 font-semibold mb-2">
+                      Tailored to Your Needs
+                    </p>
                     <p className="text-gray-600 text-sm">
-                      Includes 2 movers + truck + fuel within GTA
+                      Transparent pricing with no hidden fees
                     </p>
                   </div>
                   
@@ -375,7 +604,7 @@ export default function HomePage() {
                   </div>
 
                   <Link href="/quote" className="btn-primary w-full text-center">
-                    Claim This Offer Now
+                    Request Your Free Quote
                   </Link>
                 </div>
               </div>
@@ -513,30 +742,42 @@ export default function HomePage() {
       </section>
 
       {/* Our Work in Action Section */}
-      <section className="section-padding bg-gray-50">
+      <section className="section-padding bg-gray-50" itemScope itemType="https://schema.org/ImageGallery">
         <div className="container-custom">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center space-x-2 mb-4">
               <Camera className="h-6 w-6 text-blue-600" />
               <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">Gallery</span>
             </div>
-            <h2 className="heading-2 mb-6">Our Work in Action</h2>
-            <p className="text-lead max-w-3xl mx-auto">
+            <h2 className="heading-2 mb-6" itemProp="name">Our Work in Action</h2>
+            <p className="text-lead max-w-3xl mx-auto" itemProp="description">
               See our professional moving team in action. Real photos from real moves 
               across the Greater Toronto Area.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {workGallery.map((item, index) => (
-              <div key={index} className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+              <div 
+                key={index} 
+                className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+                itemScope 
+                itemType="https://schema.org/ImageObject"
+                itemProp="image"
+              >
                 <div className="relative h-64">
-          <Image
+                  <Image
                     src={item.image}
                     alt={item.alt}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading={index < 6 ? "eager" : "lazy"}
+                    itemProp="contentUrl"
                   />
+                  <meta itemProp="name" content={item.title} />
+                  <meta itemProp="description" content={item.description} />
+                  <meta itemProp="caption" content={item.alt} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 className="font-semibold text-lg">{item.title}</h3>
@@ -549,12 +790,12 @@ export default function HomePage() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-6">
-              Want to see more of our work? Follow us on social media for daily updates!
+              Professional moving services you can trust. Licensed, insured, and experienced movers serving Toronto & GTA.
             </p>
             <div className="flex justify-center space-x-4">
-              <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
-                View More Photos →
-              </a>
+              <Link href="/contact" className="text-blue-600 hover:text-blue-700 font-medium">
+                Get Your Free Quote →
+              </Link>
             </div>
           </div>
         </div>
@@ -608,9 +849,9 @@ export default function HomePage() {
               <Link href="/quote" className="btn-secondary text-lg px-8 py-4">
                 Get Detailed Quote
               </Link>
-                          <a href="tel:+14378712382" className="btn-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
+                          <a href="tel:+14378719288" className="btn-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
               <Phone className="h-5 w-5" />
-              <span>Call +1 (437) 871-2382</span>
+              <span>Call +1 (437) 871-9288</span>
               </a>
             </div>
           </div>

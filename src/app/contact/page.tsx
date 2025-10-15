@@ -12,7 +12,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'Contact Us | NorthMoving.ca - Get Your Free Moving Quote',
-  description: 'Contact NorthMoving.ca for your free moving quote. Call +1-437-871-2382 or visit us at 5 Defries St, Toronto. Professional moving services in Toronto & GTA.',
+  description: 'Contact NorthMoving.ca for your free moving quote. Call +1-437-871-9288 or visit us at 5 Defries St, Toronto. Professional moving services in Toronto & GTA.',
   keywords: 'contact NorthMoving, moving quote Toronto, moving company contact, Toronto movers phone, GTA moving services contact',
   openGraph: {
     title: 'Contact Us | NorthMoving.ca',
@@ -46,9 +46,9 @@ export default function ContactPage() {
               We&apos;re here to make your relocation smooth and stress-free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14378712382" className="btn-primary text-lg px-8 py-4 flex items-center justify-center space-x-2">
+              <a href="tel:+14378719288" className="btn-primary text-lg px-8 py-4 flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call Now: +1 (437) 871-2382</span>
+                <span>Call Now: +1 (437) 871-9288</span>
               </a>
               <Link href="/quote" className="btn-secondary text-lg px-8 py-4">
                 Get Online Quote
@@ -78,8 +78,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
                     <p className="text-gray-600 mb-2">Call us for immediate assistance</p>
-                    <a href="tel:+14378712382" className="text-blue-600 hover:text-blue-700 font-semibold text-lg">
-                      +1 (437) 871-2382
+                    <a href="tel:+14378719288" className="text-blue-600 hover:text-blue-700 font-semibold text-lg">
+                      +1 (437) 871-9288
                     </a>
                   </div>
                 </div>
@@ -241,9 +241,9 @@ export default function ContactPage() {
               professional movers can make.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14378712382" className="btn-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
+              <a href="tel:+14378719288" className="btn-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call +1 (437) 871-2382</span>
+                <span>Call +1 (437) 871-9288</span>
               </a>
               <Link href="/quote" className="btn-outline-white text-lg px-8 py-4">
                 Get Online Quote
