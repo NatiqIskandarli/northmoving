@@ -7,25 +7,55 @@ import { trackContactSubmission } from '@/lib/analytics';
 export default function QuickContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    // Track the contact form submission
-    trackContactSubmission('quick_contact');
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      phone: formData.get('phone') as string,
+      message: formData.get('message') as string,
+      moveType: 'Contact',
+      estimatedValue: 0,
+    };
 
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
+    try {
+      // Submit to API
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Track the contact form submission
+        trackContactSubmission('quick_contact');
+
+        setIsSubmitted(true);
         (e.target as HTMLFormElement).reset();
-      }, 3000);
-    }, 1000);
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        setError('Failed to submit. Please try again or call us directly.');
+      }
+    } catch (err) {
+      console.error('Error submitting form:', err);
+      setError('Network error. Please try again or call us at +1 (437) 871-9288');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -46,36 +76,40 @@ export default function QuickContactForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="form-label">Name</label>
-              <input 
-                type="text" 
-                className="form-input" 
-                placeholder="Your name" 
-                required 
+              <input
+                type="text"
+                name="name"
+                className="form-input"
+                placeholder="Your name"
+                required
               />
             </div>
             <div>
               <label className="form-label">Phone</label>
-              <input 
-                type="tel" 
-                className="form-input" 
-                placeholder="Your phone" 
-                required 
+              <input
+                type="tel"
+                name="phone"
+                className="form-input"
+                placeholder="Your phone"
+                required
               />
             </div>
           </div>
           <div>
             <label className="form-label">Email</label>
-            <input 
-              type="email" 
-              className="form-input" 
-              placeholder="Your email" 
-              required 
+            <input
+              type="email"
+              name="email"
+              className="form-input"
+              placeholder="Your email"
+              required
             />
           </div>
           <div>
             <label className="form-label">Message</label>
-            <textarea 
-              className="form-input h-24 resize-none" 
+            <textarea
+              name="message"
+              className="form-input h-24 resize-none"
               placeholder="Tell us about your moving needs..."
               required
             ></textarea>

@@ -118,15 +118,170 @@ export default function QuotePage() {
 
   const watchedValues = watch();
 
+  // Helper function to format quote data into a readable message
+  const formatQuoteMessage = (data: QuoteFormData): string => {
+    let message = '=== QUOTE REQUEST DETAILS ===\n\n';
+
+    // Move Details
+    message += '📍 MOVE DETAILS:\n';
+    message += `From: ${data.originAddress}${data.originUnit ? ` (Unit ${data.originUnit})` : ''}\n`;
+    message += `Building Type: ${data.originBuildingType}\n`;
+    if (data.originBedrooms) message += `Size: ${data.originBedrooms}\n`;
+    if (data.originStairs) message += `Stairs: ${data.originStairs}\n`;
+    if (data.originElevator) message += `Elevator: ${data.originElevator}\n`;
+
+    message += `\nTo: ${data.destinationAddress}${data.destinationUnit ? ` (Unit ${data.destinationUnit})` : ''}\n`;
+    message += `Building Type: ${data.destinationBuildingType}\n`;
+    if (data.destinationBedrooms) message += `Size: ${data.destinationBedrooms}\n`;
+    if (data.destinationStairs) message += `Stairs: ${data.destinationStairs}\n`;
+    if (data.destinationElevator) message += `Elevator: ${data.destinationElevator}\n`;
+
+    if (data.multipleStops && data.additionalStops) {
+      message += `\nAdditional Stops: ${data.additionalStops}\n`;
+    }
+
+    // Date & Time
+    message += `\n📅 SCHEDULE:\n`;
+    message += `Move Date: ${data.moveDate}\n`;
+    message += `Preferred Time: ${data.preferredTime}\n`;
+
+    // Inventory
+    message += `\n📦 INVENTORY:\n`;
+    if (data.livingRoom) message += `Living Room: ${data.livingRoom}\n`;
+    if (data.bedroom1) message += `Master Bedroom: ${data.bedroom1}\n`;
+    if (data.bedroom2) message += `Bedroom 2: ${data.bedroom2}\n`;
+    if (data.bedroom3) message += `Bedroom 3: ${data.bedroom3}\n`;
+    if (data.kitchen) message += `Kitchen: ${data.kitchen}\n`;
+    if (data.diningRoom) message += `Dining Room: ${data.diningRoom}\n`;
+    if (data.basement) message += `Basement: ${data.basement}\n`;
+    if (data.garage) message += `Garage: ${data.garage}\n`;
+
+    if (data.smallBoxes || data.mediumBoxes || data.largeBoxes) {
+      message += `\nBoxes: `;
+      if (data.smallBoxes) message += `${data.smallBoxes} small, `;
+      if (data.mediumBoxes) message += `${data.mediumBoxes} medium, `;
+      if (data.largeBoxes) message += `${data.largeBoxes} large`;
+      message += `\n`;
+    }
+
+    // Specialty Items
+    if (data.piano || data.appliances?.length || data.heavyItems?.length || data.fragileItems) {
+      message += `\n🎹 SPECIALTY ITEMS:\n`;
+      if (data.piano && data.pianoType) message += `Piano: ${data.pianoType}\n`;
+      if (data.appliances?.length) message += `Appliances: ${data.appliances.join(', ')}\n`;
+      if (data.heavyItems?.length) message += `Heavy Items: ${data.heavyItems.join(', ')}\n`;
+      if (data.fragileItems) message += `Fragile Items: ${data.fragileItems}\n`;
+    }
+
+    // Services
+    message += `\n🛠️ SERVICES REQUESTED:\n`;
+    message += `Packing: ${data.packingService}\n`;
+    if (data.packingService === 'partial-pack' && data.packingRooms) {
+      message += `Packing Details: ${data.packingRooms}\n`;
+    }
+    if (data.unpackingService) message += `✓ Unpacking Service\n`;
+    if (data.furnitureAssembly) message += `✓ Furniture Assembly/Disassembly\n`;
+    if (data.applianceService) message += `✓ Appliance Service\n`;
+    if (data.junkRemoval) message += `✓ Junk Removal\n`;
+    if (data.packagingMaterials) message += `✓ Packaging Materials\n`;
+
+    // Logistics
+    message += `\n🚚 LOGISTICS:\n`;
+    message += `Origin Truck Access: ${data.originTruckAccess}\n`;
+    message += `Destination Truck Access: ${data.destinationTruckAccess}\n`;
+    if (data.accessChallenges) message += `Access Challenges: ${data.accessChallenges}\n`;
+
+    if (data.additionalNotes) {
+      message += `\n📝 ADDITIONAL NOTES:\n${data.additionalNotes}\n`;
+    }
+
+    return message;
+  };
+
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log('Quote form data:', data);
-    setSubmitSuccess(true);
-    setIsSubmitting(false);
+
+   
+
+    try {
+      // Submit to API
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          moveType: 'Quote Request',
+          moveDate: data.moveDate,
+          message: formatQuoteMessage(data),
+          estimatedValue: 0,
+        }),
+      });
+
+      const result = await response.json();
+     
+
+      if (result.success) {
+        setSubmitSuccess(true);
+      } else {
+        alert('Failed to submit quote. Please try again or call us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting quote:', error);
+      alert('Network error. Please try again or call us at +1 (437) 871-9288');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const onError = (errors: any) => {
+    console.log('Validation errors:', errors);
+
+    // Find which step has errors
+    let errorStep = 1;
+    const errorMessages: string[] = [];
+
+    // Step 1: Contact Info
+    if (errors.name || errors.phone || errors.email) {
+      errorStep = 1;
+      if (errors.name) errorMessages.push('Name');
+      if (errors.phone) errorMessages.push('Phone');
+      if (errors.email) errorMessages.push('Email');
+    }
+    // Step 2: Move Details
+    else if (errors.originAddress || errors.originBuildingType || errors.destinationAddress || errors.destinationBuildingType) {
+      errorStep = 2;
+      if (errors.originAddress) errorMessages.push('Origin Address');
+      if (errors.originBuildingType) errorMessages.push('Origin Building Type');
+      if (errors.destinationAddress) errorMessages.push('Destination Address');
+      if (errors.destinationBuildingType) errorMessages.push('Destination Building Type');
+    }
+    // Step 3: Date & Time
+    else if (errors.moveDate || errors.preferredTime) {
+      errorStep = 3;
+      if (errors.moveDate) errorMessages.push('Move Date');
+      if (errors.preferredTime) errorMessages.push('Preferred Time');
+    }
+    // Step 5: Services
+    else if (errors.packingService) {
+      errorStep = 5;
+      errorMessages.push('Packing Service');
+    }
+    // Step 6: Logistics
+    else if (errors.originTruckAccess || errors.destinationTruckAccess) {
+      errorStep = 6;
+      if (errors.originTruckAccess) errorMessages.push('Origin Truck Access');
+      if (errors.destinationTruckAccess) errorMessages.push('Destination Truck Access');
+    }
+
+    // Navigate to the step with errors
+    setCurrentStep(errorStep);
+
+    // Show alert
+    alert(`Please fill in the following required fields:\n\n${errorMessages.join('\n')}`);
   };
 
   const buildingTypes = [
@@ -171,7 +326,7 @@ export default function QuotePage() {
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Quote Request Submitted!</h2>
             <p className="text-gray-600 mb-6">
-              Thank you for your quote request. We'll review your information and get back to you within 2 hours with a detailed estimate.
+              Thank you for your quote request. We'll review your information and get back to you within 5 minutes with a detailed estimate.
             </p>
             <div className="space-y-4">
               <a href="tel:+14378719288" className="btn-primary w-full text-center block">
@@ -236,7 +391,7 @@ export default function QuotePage() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="max-w-4xl mx-auto">
+        <form onSubmit={handleSubmit(onSubmit, onError)} className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
             
             {/* Step 1: Contact Information */}
@@ -875,8 +1030,8 @@ export default function QuotePage() {
                 <div className="bg-blue-50 rounded-lg p-6">
                   <h4 className="text-lg font-medium text-gray-900 mb-3">Almost Done!</h4>
                   <p className="text-gray-700 text-sm leading-relaxed">
-                    By submitting this form, you'll receive a detailed quote within 2 hours. Our team will review 
-                    all the information you've provided to ensure an accurate estimate. If we need any clarification, 
+                    By submitting this form, you'll receive a detailed quote within 5 minutes. Our team will review
+                    all the information you've provided to ensure an accurate estimate. If we need any clarification,
                     we'll contact you using the information provided.
                   </p>
                   
