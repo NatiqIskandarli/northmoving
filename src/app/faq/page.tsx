@@ -316,14 +316,14 @@ export default function FAQPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+14378719288" 
+              <a
+                href="tel:+14378719288"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (416) 123-MOVE
+                Call +1 (437) 871-9288
               </a>
-              <a 
+              <a
                 href="mailto:move@northmoving.ca"
                 className="inline-flex items-center justify-center px-8 py-4 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-colors"
               >

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -57,20 +57,44 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400 flex-shrink-0" />
-                <a href="mailto:info@northmoving.ca" className="text-gray-300 hover:text-white transition-colors">
-                  info@northmoving.ca
+                <a href="mailto:move@northmoving.ca" className="text-gray-300 hover:text-white transition-colors">
+                  move@northmoving.ca
                 </a>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-300">
-                  Serving Greater Toronto Area<br />
-                  Toronto, ON, Canada
-                </span>
+                <address className="text-gray-300 not-italic">
+                  5 Defries Street<br />
+                  Toronto, ON M5A 0W7<br />
+                  Canada
+                </address>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300">Mon-Sun: 8AM-8PM</span>
+              </div>
+            </div>
+
+            {/* Google Business Profile Link */}
+            <div className="mt-6 pt-6 border-t border-gray-700">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=NorthMoving.ca+5+Defries+Street+Toronto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-5 rounded-lg transition-colors duration-200"
+              >
+                <Star className="h-4 w-4 fill-white" />
+                <span>Review Us on Google</span>
+              </a>
+              <div className="mt-3 flex items-center space-x-1 text-sm">
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                <span className="ml-2 text-gray-300 font-semibold">4.9/5</span>
+                <span className="text-gray-500">•</span>
+                <span className="text-gray-400">150+ Reviews</span>
               </div>
             </div>
           </div>

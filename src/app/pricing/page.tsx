@@ -1,12 +1,15 @@
 import Link from 'next/link';
-import { 
-  CheckCircle, 
-  Phone, 
-  Clock, 
-  Truck, 
-  Shield, 
+import {
+  CheckCircle,
+  Phone,
+  Clock,
+  Truck,
+  Shield,
   DollarSign,
-  Info
+  Info,
+  Home,
+  Building,
+  Package
 } from 'lucide-react';
 
 export const metadata = {
@@ -435,6 +438,71 @@ export default function PricingPage() {
         </div>
       </section>
 
+      {/* Popular Services Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="heading-2 mb-4">Explore Our Services</h2>
+            <p className="text-lead max-w-2xl mx-auto">
+              Learn more about our professional moving services and get detailed pricing information.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/services/residential" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <Home className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Residential Moving
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Complete home moving services with transparent hourly rates.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                View Service →
+              </span>
+            </Link>
+
+            <Link href="/services/commercial" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <Building className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Commercial Moving
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Office and business relocation with minimal downtime.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                View Service →
+              </span>
+            </Link>
+
+            <Link href="/services/packing" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <Package className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Packing Services
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Professional packing included in hourly rate, no extra fees.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                View Service →
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -443,7 +511,7 @@ export default function PricingPage() {
               Ready for Your Customized Quote?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Let us create a tailored moving solution that fits your needs and budget. 
+              Let us create a tailored moving solution that fits your needs and budget.
               Free consultation, no obligation, fast response.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

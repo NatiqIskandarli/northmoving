@@ -226,6 +226,71 @@ export default function PackingServicesPage() {
         </div>
       </section>
 
+      {/* Related Services Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="heading-2 mb-4">Related Services</h2>
+            <p className="text-lead max-w-2xl mx-auto">
+              Explore our other professional moving services to make your relocation complete.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/services/residential" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <Package className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Residential Moving
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Complete home moving services with professional packing included.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                Learn More →
+              </span>
+            </Link>
+
+            <Link href="/pricing" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <CheckCircle className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Pricing & Packages
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                View our transparent pricing for packing and moving services.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                View Pricing →
+              </span>
+            </Link>
+
+            <Link href="/services/specialty" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <Heart className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Specialty Moving
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Expert packing and moving for pianos, antiques, and valuables.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                Learn More →
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section-padding bg-blue-600 text-white">
         <div className="container-custom">
@@ -234,7 +299,7 @@ export default function PackingServicesPage() {
               Need Professional Packing?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Let our expert packers protect your belongings. Get your free packing quote 
+              Let our expert packers protect your belongings. Get your free packing quote
               today and move with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

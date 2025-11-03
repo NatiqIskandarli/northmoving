@@ -1,14 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Phone,
+  Mail,
+  MapPin,
   Clock,
   MessageSquare,
-  Send,
-  CheckCircle
+  CheckCircle,
+  Star,
+  ExternalLink
 } from 'lucide-react';
+import QuickContactForm from '@/components/QuickContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us | NorthMoving.ca - Get Your Free Moving Quote',
@@ -94,8 +96,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Email</h3>
                     <p className="text-gray-600 mb-2">Send us your moving details</p>
-                    <a href="mailto:info@northmoving.ca" className="text-blue-600 hover:text-blue-700 font-semibold">
-                      info@northmoving.ca
+                    <a href="mailto:move@northmoving.ca" className="text-blue-600 hover:text-blue-700 font-semibold">
+                      move@northmoving.ca
                     </a>
                   </div>
                 </div>
@@ -136,34 +138,51 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Quick Contact Form */}
-              <div className="mt-12 bg-gray-50 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Contact</h3>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="form-label">Name</label>
-                      <input type="text" className="form-input" placeholder="Your name" />
-                    </div>
-                    <div>
-                      <label className="form-label">Phone</label>
-                      <input type="tel" className="form-input" placeholder="Your phone" />
-                    </div>
-                  </div>
-                  <div>
-                    <label className="form-label">Email</label>
-                    <input type="email" className="form-input" placeholder="Your email" />
-                  </div>
-                  <div>
-                    <label className="form-label">Message</label>
-                    <textarea className="form-input h-24 resize-none" placeholder="Tell us about your moving needs..."></textarea>
-                  </div>
-                  <button type="submit" className="btn-primary w-full flex items-center justify-center space-x-2">
-                    <Send className="h-5 w-5" />
-                    <span>Send Message</span>
-                  </button>
-                </form>
+              {/* Google Business Profile Links */}
+              <div className="mt-8 bg-gradient-to-br from-blue-50 to-white border-2 border-blue-100 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center space-x-2">
+                  <Star className="h-6 w-6 text-yellow-500 fill-yellow-500" />
+                  <span>Find Us on Google</span>
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  See our reviews and ratings from satisfied customers across the GTA.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href="https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                  >
+                    <Star className="h-5 w-5" />
+                    <span>Write a Review</span>
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=NorthMoving.ca+5+Defries+Street+Toronto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                  >
+                    <MapPin className="h-5 w-5" />
+                    <span>See Us on Google</span>
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
+                <div className="mt-4 flex items-center justify-center space-x-1 text-sm text-gray-600">
+                  <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                  <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                  <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                  <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                  <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+                  <span className="ml-2 font-semibold">4.9/5</span>
+                  <span className="text-gray-400">•</span>
+                  <span>150+ Reviews</span>
+                </div>
               </div>
+
+              {/* Quick Contact Form */}
+              <QuickContactForm />
             </div>
 
             {/* Map */}

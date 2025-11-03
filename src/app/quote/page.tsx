@@ -949,7 +949,7 @@ export default function QuotePage() {
                 <Phone className="h-5 w-5" />
                 <span>Call +1 (437) 871-9288</span>
               </a>
-              <a href="mailto:info@northmoving.ca" className="btn-outline flex items-center justify-center space-x-2">
+              <a href="mailto:move@northmoving.ca" className="btn-outline flex items-center justify-center space-x-2">
                 <Mail className="h-5 w-5" />
                 <span>Email Us</span>
               </a>

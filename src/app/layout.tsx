@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,16 +37,35 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "NorthMoving.ca - Trusted GTA Movers | Professional Moving Services",
-    description: "Professional moving services in Toronto and GTA. Get a free quote from licensed, insured movers.",
+    description: "Professional moving services in Toronto and GTA. Get a free quote from licensed, insured movers. Residential, commercial, and specialty moving services.",
     url: "https://northmoving.ca",
     siteName: "NorthMoving.ca",
     locale: "en_CA",
     type: "website",
+    images: [
+      {
+        url: "https://northmoving.ca/images/slide/moving-truck-team.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NorthMoving.ca Professional Moving Team with Truck in Toronto",
+      },
+      {
+        url: "https://northmoving.ca/images/slide/residential-moving.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Residential Moving Services in Greater Toronto Area",
+      },
+    ],
+    phoneNumbers: ["+1-437-871-9288"],
+    emails: ["move@northmoving.ca"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "NorthMoving.ca - Trusted GTA Movers",
-    description: "Professional moving services in Toronto and GTA. Get a free quote from licensed, insured movers.",
+    title: "NorthMoving.ca - Trusted GTA Movers | Professional Moving Services",
+    description: "Professional moving services in Toronto and GTA. Get a free quote from licensed, insured movers. Residential, commercial, and specialty moving services.",
+    images: ["https://northmoving.ca/images/slide/moving-truck-team.jpg"],
+    creator: "@northmoving",
+    site: "@northmoving",
   },
   robots: {
     index: true,
@@ -72,13 +92,21 @@ export default function RootLayout({
     "description": "Professional moving services in Toronto and Greater Toronto Area. Licensed, insured, and experienced movers.",
     "url": "https://northmoving.ca",
     "logo": "https://northmoving.ca/logo.png",
-          "telephone": "+1-437-871-9288",
-    "email": "info@northmoving.ca",
+    "image": "https://northmoving.ca/images/slide/moving-truck-team.jpg",
+    "telephone": "+1-437-871-9288",
+    "email": "move@northmoving.ca",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "5 Defries Street",
       "addressLocality": "Toronto",
       "addressRegion": "ON",
+      "postalCode": "M5A 0W7",
       "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "43.6532",
+      "longitude": "-79.3832"
     },
     "areaServed": [
       {
@@ -86,7 +114,7 @@ export default function RootLayout({
         "name": "Toronto"
       },
       {
-        "@type": "City", 
+        "@type": "City",
         "name": "Mississauga"
       },
       {
@@ -108,7 +136,7 @@ export default function RootLayout({
     ],
     "serviceType": [
       "Residential Moving",
-      "Commercial Moving", 
+      "Commercial Moving",
       "Packing Services",
       "Specialty Moving",
       "Furniture Transportation",
@@ -117,11 +145,19 @@ export default function RootLayout({
     "hasCredential": "Licensed and Insured",
     "openingHours": "Mo-Su 08:00-20:00",
     "priceRange": "$$",
+    "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "E-Transfer"],
+    "currenciesAccepted": "CAD",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "reviewCount": "150"
-    }
+    },
+    "sameAs": [
+      "https://www.facebook.com/northmoving",
+      "https://www.instagram.com/northmoving",
+      "https://www.linkedin.com/company/northmoving",
+      "https://twitter.com/northmoving"
+    ]
   };
 
   return (
@@ -135,6 +171,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased`} style={{minHeight: '100vh'}}>
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
         <Header />
         <main className="min-h-screen" style={{contentVisibility: 'auto'}}>
           {children}

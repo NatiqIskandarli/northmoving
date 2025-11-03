@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { FileText, Phone, Mail } from 'lucide-react';
+import { FileText, Phone, Mail, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | NorthMoving.ca - Service Terms & Conditions',
@@ -37,7 +37,10 @@ export default function TermsOfServicePage() {
               Please read these terms carefully before using our moving services. These terms govern your use of NorthMoving.ca services.
             </p>
             <p className="text-gray-600">
-              Last updated: January 2024
+              Last updated: October 28, 2025
+            </p>
+            <p className="text-sm text-gray-500 mt-2">
+              Effective Date: October 28, 2025
             </p>
           </div>
         </div>
@@ -176,25 +179,46 @@ export default function TermsOfServicePage() {
               These terms are governed by the laws of Ontario, Canada. Any legal proceedings will be conducted in the courts of Ontario.
             </p>
 
+            <h2>Company Information</h2>
+            <p>
+              These terms of service are issued by:
+            </p>
+            <p className="font-semibold">
+              NorthMoving.ca<br />
+              5 Defries Street<br />
+              Toronto, ON M5A 0W7<br />
+              Canada
+            </p>
+
             <h2>Contact Information</h2>
             <p>
               If you have questions about these terms of service, please contact us:
             </p>
             
             <div className="bg-gray-50 rounded-lg p-6 not-prose">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-blue-600" />
                   <div>
                     <div className="font-semibold">Phone</div>
-                    <div className="text-gray-600">(416) 123-MOVE</div>
+                    <a href="tel:+14378719288" className="text-gray-600 hover:text-blue-600">+1 (437) 871-9288</a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-600" />
                   <div>
                     <div className="font-semibold">Email</div>
-                    <div className="text-gray-600">legal@northmoving.ca</div>
+                    <a href="mailto:move@northmoving.ca" className="text-gray-600 hover:text-blue-600">move@northmoving.ca</a>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <div className="font-semibold">Address</div>
+                    <address className="text-gray-600 not-italic text-sm">
+                      5 Defries Street<br />
+                      Toronto, ON M5A 0W7
+                    </address>
                   </div>
                 </div>
               </div>

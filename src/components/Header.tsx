@@ -76,7 +76,15 @@ const Header = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center space-x-2">
-                <Image src="/images/logo.png" alt="NorthMoving.ca" width={390} height={200} />
+                <Image
+                  src="/images/logo.png"
+                  alt="NorthMoving.ca - Professional Moving Services Toronto"
+                  width={390}
+                  height={200}
+                  priority
+                  quality={90}
+                  sizes="(max-width: 768px) 200px, 390px"
+                />
               </Link>
             </div>
 
@@ -85,12 +93,16 @@ const Header = () => {
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-600" />
                 <span className="font-medium">Call us Now</span>
-                <span className="font-bold text-gray-900">{contactInfo.phoneDisplay}</span>
+                <a href={`tel:${contactInfo.phone}`} className="font-bold text-gray-900 hover:text-blue-600 transition-colors">
+                  {contactInfo.phoneDisplay}
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-orange-500" />
                 <span className="font-medium">Email us</span>
-                <span className="font-bold text-gray-900">{contactInfo.email}</span>
+                <a href={`mailto:${contactInfo.email}`} className="font-bold text-gray-900 hover:text-orange-600 transition-colors">
+                  {contactInfo.email}
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4 text-orange-500" />

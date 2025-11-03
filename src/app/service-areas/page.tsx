@@ -322,7 +322,7 @@ export default function ServiceAreasPage() {
               Interested in our services expanding to your city? Let us know!
             </p>
             
-            <a href="mailto:info@northmoving.ca" className="btn-primary">
+            <a href="mailto:move@northmoving.ca" className="btn-primary">
               Request Service Expansion
             </a>
           </div>

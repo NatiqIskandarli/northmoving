@@ -226,6 +226,71 @@ export default function ResidentialMovingPage() {
         </div>
       </section>
 
+      {/* Related Services Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="heading-2 mb-4">Enhance Your Move</h2>
+            <p className="text-lead max-w-2xl mx-auto">
+              Add these services to make your residential move even smoother.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link href="/services/packing" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <Package className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Packing Services
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Professional packing to protect your belongings during the move.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                Learn More →
+              </span>
+            </Link>
+
+            <Link href="/pricing" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <CheckCircle className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  View Pricing
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Transparent pricing for residential moving services in the GTA.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                See Rates →
+              </span>
+            </Link>
+
+            <Link href="/blog" className="card group hover:shadow-xl transition-all duration-300">
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                  <Star className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  Moving Tips
+                </h3>
+              </div>
+              <p className="text-gray-600">
+                Expert advice and checklists for a successful home move.
+              </p>
+              <span className="inline-block mt-4 text-blue-600 font-semibold group-hover:underline">
+                Read Blog →
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section-padding bg-blue-600 text-white">
         <div className="container-custom">
@@ -234,7 +299,7 @@ export default function ResidentialMovingPage() {
               Ready to Move Your Home?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Get your free, no-obligation quote today and experience the difference 
+              Get your free, no-obligation quote today and experience the difference
               professional residential movers can make.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
