@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         alt: "Residential Moving Services in Greater Toronto Area",
       },
     ],
-    phoneNumbers: ["+1-437-871-9288"],
+    phoneNumbers: ["+1-437-290-5007"],
     emails: ["move@northmoving.ca"],
   },
   twitter: {
@@ -93,7 +93,7 @@ export default function RootLayout({
     "url": "https://northmoving.ca",
     "logo": "https://northmoving.ca/logo.png",
     "image": "https://northmoving.ca/images/slide/moving-truck-team.jpg",
-    "telephone": "+1-437-871-9288",
+    "telephone": "+1-437-290-5007",
     "email": "move@northmoving.ca",
     "address": {
       "@type": "PostalAddress",
@@ -170,12 +170,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className={`${inter.className} antialiased`} style={{minHeight: '100vh'}}>
+      <body className={`${inter.className} antialiased`} style={{ minHeight: '100vh' }}>
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         )}
         <Header />
-        <main className="min-h-screen" style={{contentVisibility: 'auto'}}>
+        <main className="min-h-screen" style={{ contentVisibility: 'auto' }}>
           {children}
         </main>
         <Footer />

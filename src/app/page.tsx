@@ -3,17 +3,17 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { 
-  Phone, 
-  Star, 
-  Shield, 
-  Users, 
-  CheckCircle, 
-  Home, 
-  Building, 
-  Package, 
-  Piano, 
-  Truck, 
+import {
+  Phone,
+  Star,
+  Shield,
+  Users,
+  CheckCircle,
+  Home,
+  Building,
+  Package,
+  Piano,
+  Truck,
   Heart,
   Award,
   DollarSign,
@@ -32,7 +32,7 @@ export default function HomePage() {
       subtitle: "Licensed & Insured Experts"
     },
     {
-      image: "/images/slide/residential-moving.jpg", 
+      image: "/images/slide/residential-moving.jpg",
       alt: "Team carefully moving household items from Toronto home",
       title: "Residential Moving",
       subtitle: "Your Home, Our Priority"
@@ -40,7 +40,7 @@ export default function HomePage() {
     {
       image: "/images/slide/office-relocation.jpg",
       alt: "Professional office relocation in downtown Toronto",
-      title: "Commercial Moving", 
+      title: "Commercial Moving",
       subtitle: "Minimal Downtime Guaranteed"
     },
     {
@@ -444,7 +444,7 @@ export default function HomePage() {
       title: "Secure Furniture Stacking",
       description: "Expert stacking for safety"
     },
-   
+
   ];
 
   const serviceAreas = [
@@ -461,11 +461,10 @@ export default function HomePage() {
           {heroSlides.map((slide, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
-              }`}
-          >
-            <Image
+              className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+                }`}
+            >
+              <Image
                 src={slide.image}
                 alt={slide.alt}
                 fill
@@ -488,7 +487,7 @@ export default function HomePage() {
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
-        
+
         <button
           onClick={nextSlide}
           className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-all duration-200 backdrop-blur-sm"
@@ -507,11 +506,10 @@ export default function HomePage() {
               aria-label={`Go to slide ${index + 1}`}
               aria-current={index === currentSlide ? 'true' : 'false'}
             >
-              <span className={`block w-3 h-3 rounded-full transition-all duration-200 ${
-                index === currentSlide 
-                  ? 'bg-white scale-110' 
+              <span className={`block w-3 h-3 rounded-full transition-all duration-200 ${index === currentSlide
+                  ? 'bg-white scale-110'
                   : 'bg-white/50 group-hover:bg-white/70'
-              }`} />
+                }`} />
             </button>
           ))}
         </div>
@@ -532,14 +530,14 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="heading-1 mb-6 text-white">
-                                  Your Smooth &amp; Stress-Free Move Starts with{' '}
-                <span className="text-orange-400">NorthMoving.ca!</span>
+                  Your Smooth &amp; Stress-Free Move Starts with{' '}
+                  <span className="text-orange-400">NorthMoving.ca!</span>
                 </h1>
                 <p className="text-lead mb-8 text-white/90">
-                  From houses and condos to offices and specialty items, get a fast, free quote 
+                  From houses and condos to offices and specialty items, get a fast, free quote
                   from reliable, insured professionals. We make your relocation easy and affordable.
                 </p>
-              
+
                 {/* Trust Signals */}
                 <div className="flex flex-wrap gap-6 mb-8">
                   <div className="flex items-center space-x-2">
@@ -565,9 +563,9 @@ export default function HomePage() {
                   <Link href="/quote" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors">
                     GET YOUR FREE MOVING QUOTE
                   </Link>
-                  <a href="tel:+14378719288" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-lg text-lg flex items-center justify-center space-x-2 backdrop-blur-sm border border-white/20 transition-colors">
+                  <a href="tel:+14372905007" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-lg text-lg flex items-center justify-center space-x-2 backdrop-blur-sm border border-white/20 transition-colors">
                     <Phone className="h-5 w-5" />
-                    <span>CALL US NOW: +1 (437) 871-9288</span>
+                    <span>CALL US NOW: +1 (437) 290-5007</span>
                   </a>
                 </div>
               </div>
@@ -589,7 +587,7 @@ export default function HomePage() {
                       Transparent pricing with no hidden fees
                     </p>
                   </div>
-                  
+
                   <div className="space-y-3 mb-6">
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -625,7 +623,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-6">Why Choose NorthMoving.ca?</h2>
             <p className="text-lead max-w-3xl mx-auto">
-              We've built our reputation as the most reliable and professional moving company 
+              We've built our reputation as the most reliable and professional moving company
               in the GTA. Here's what sets us apart.
             </p>
           </div>
@@ -654,7 +652,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-6">Our Moving Services</h2>
             <p className="text-lead max-w-3xl mx-auto">
-              Whether you're moving across the street or across the GTA, we have the expertise 
+              Whether you're moving across the street or across the GTA, we have the expertise
               and resources to handle any type of move.
             </p>
           </div>
@@ -692,7 +690,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-6">Our Simple Moving Process</h2>
             <p className="text-lead max-w-3xl mx-auto">
-              We've streamlined the moving process to make it as easy as possible for you. 
+              We've streamlined the moving process to make it as easy as possible for you.
               Here's how we turn your moving stress into moving success.
             </p>
           </div>
@@ -757,17 +755,17 @@ export default function HomePage() {
             </div>
             <h2 className="heading-2 mb-6" itemProp="name">Our Work in Action</h2>
             <p className="text-lead max-w-3xl mx-auto" itemProp="description">
-              See our professional moving team in action. Real photos from real moves 
+              See our professional moving team in action. Real photos from real moves
               across the Greater Toronto Area.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {workGallery.map((item, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
-                itemScope 
+                itemScope
                 itemType="https://schema.org/ImageObject"
                 itemProp="image"
               >
@@ -814,7 +812,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <h2 className="heading-2 mb-6">What Our Customers Say</h2>
             <p className="text-lead max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers 
+              Don't just take our word for it. Here's what our satisfied customers
               have to say about their moving experience with us.
             </p>
           </div>
@@ -849,16 +847,16 @@ export default function HomePage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get your free, no-obligation quote today and take the first step 
+              Get your free, no-obligation quote today and take the first step
               towards a stress-free move.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/quote" className="btn-secondary text-lg px-8 py-4">
                 Get Detailed Quote
               </Link>
-                          <a href="tel:+14378719288" className="btn-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
-              <Phone className="h-5 w-5" />
-              <span>Call +1 (437) 871-9288</span>
+              <a href="tel:+14378719288" className="btn-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
+                <Phone className="h-5 w-5" />
+                <span>Call +1 (437) 871-9288</span>
               </a>
             </div>
           </div>

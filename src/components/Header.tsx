@@ -19,8 +19,8 @@ const Header = () => {
   ];
 
   const contactInfo = {
-    phone: '+14378719288',
-    phoneDisplay: '+1 (437) 871-9288',
+    phone: '+14372905007',
+    phoneDisplay: '+1 (437) 290-5007',
     email: 'move@northmoving.ca',
     hours: '7 days a week!'
   };
@@ -139,7 +139,7 @@ const Header = () => {
             >
               HOME
             </Link>
-            
+
             {/* RESIDENTIAL MOVING Dropdown */}
             <div className="relative group">
               <Link
@@ -149,7 +149,7 @@ const Header = () => {
                 <span>RESIDENTIAL MOVING</span>
                 <span className="text-xs">▼</span>
               </Link>
-              
+
               {/* Dropdown Menu */}
               <div className="absolute left-0 top-full mt-0 w-64 bg-white shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
@@ -184,7 +184,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* BUSINESS MOVING Dropdown */}
             <div className="relative group">
               <Link
@@ -194,7 +194,7 @@ const Header = () => {
                 <span>BUSINESS MOVING</span>
                 <span className="text-xs">▼</span>
               </Link>
-              
+
               {/* Dropdown Menu */}
               <div className="absolute left-0 top-full mt-0 w-64 bg-white shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
@@ -229,7 +229,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* SERVICE AREAS Dropdown */}
             <div className="relative group">
               <Link
@@ -239,7 +239,7 @@ const Header = () => {
                 <span>SERVICE AREAS</span>
                 <span className="text-xs">▼</span>
               </Link>
-              
+
               {/* Dropdown Menu */}
               <div className="absolute left-0 top-full mt-0 w-64 bg-white shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
@@ -274,7 +274,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            
+
             <Link
               href="/service-areas"
               className="text-white hover:text-orange-100 font-semibold text-sm transition-colors duration-200"

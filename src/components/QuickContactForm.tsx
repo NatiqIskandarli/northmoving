@@ -52,7 +52,7 @@ export default function QuickContactForm() {
       }
     } catch (err) {
       console.error('Error submitting form:', err);
-      setError('Network error. Please try again or call us at +1 (437) 871-9288');
+      setError('Network error. Please try again or call us at +1 (437) 290-5007');
     } finally {
       setIsSubmitting(false);
     }
@@ -61,7 +61,7 @@ export default function QuickContactForm() {
   return (
     <div className="mt-12 bg-gray-50 rounded-xl p-6">
       <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Contact</h3>
-      
+
       {isSubmitted ? (
         <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
           <div className="text-green-600 text-lg font-semibold mb-2">
@@ -114,8 +114,8 @@ export default function QuickContactForm() {
               required
             ></textarea>
           </div>
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             className="btn-primary w-full flex items-center justify-center space-x-2"
             disabled={isSubmitting}
           >

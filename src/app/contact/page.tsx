@@ -14,7 +14,7 @@ import QuickContactForm from '@/components/QuickContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us | NorthMoving.ca - Get Your Free Moving Quote',
-  description: 'Contact NorthMoving.ca for your free moving quote. Call +1-437-871-9288 or visit us at 5 Defries St, Toronto. Professional moving services in Toronto & GTA.',
+  description: 'Contact NorthMoving.ca for your free moving quote. Call +1-437-290-5007 or visit us at 5 Defries St, Toronto. Professional moving services in Toronto & GTA.',
   keywords: 'contact NorthMoving, moving quote Toronto, moving company contact, Toronto movers phone, GTA moving services contact',
   openGraph: {
     title: 'Contact Us | NorthMoving.ca',
@@ -44,13 +44,13 @@ export default function ContactPage() {
               Get Your Free Moving Quote Today
             </h1>
             <p className="text-lead mb-8 max-w-3xl mx-auto">
-              Ready to move? Contact our professional moving team for a free, no-obligation quote. 
+              Ready to move? Contact our professional moving team for a free, no-obligation quote.
               We&apos;re here to make your relocation smooth and stress-free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14378719288" className="btn-primary text-lg px-8 py-4 flex items-center justify-center space-x-2">
+              <a href="tel:+14372905007" className="btn-primary text-lg px-8 py-4 flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call Now: +1 (437) 871-9288</span>
+                <span>Call Now: +1 (437) 290-5007</span>
               </a>
               <Link href="/quote" className="btn-secondary text-lg px-8 py-4">
                 Get Online Quote
@@ -64,11 +64,11 @@ export default function ContactPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
+
             {/* Contact Information */}
             <div>
               <h2 className="heading-2 mb-8">Get in Touch</h2>
-              
+
               <div className="space-y-8">
                 {/* Phone */}
                 <div className="flex items-start space-x-4">
@@ -80,8 +80,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Phone</h3>
                     <p className="text-gray-600 mb-2">Call us for immediate assistance</p>
-                    <a href="tel:+14378719288" className="text-blue-600 hover:text-blue-700 font-semibold text-lg">
-                      +1 (437) 871-9288
+                    <a href="tel:+14372905007" className="text-blue-600 hover:text-blue-700 font-semibold text-lg">
+                      +1 (437) 290-5007
                     </a>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function ContactPage() {
                   title="NorthMoving.ca Office Location"
                 ></iframe>
               </div>
-              
+
               {/* Service Areas */}
               <div className="mt-8 bg-blue-50 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Service Areas</h3>
@@ -256,13 +256,13 @@ export default function ContactPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Contact us today for your free moving quote and experience the difference 
+              Contact us today for your free moving quote and experience the difference
               professional movers can make.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+14378719288" className="btn-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
+              <a href="tel:+14372905007" className="btn-white text-lg px-8 py-4 flex items-center justify-center space-x-2">
                 <Phone className="h-5 w-5" />
-                <span>Call +1 (437) 871-9288</span>
+                <span>Call +1 (437) 290-5007</span>
               </a>
               <Link href="/quote" className="btn-outline-white text-lg px-8 py-4">
                 Get Online Quote
