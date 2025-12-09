@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getPool } from '@/lib/db';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+
 
 // GET - Retrieve all leads
 export async function GET(request: NextRequest) {
@@ -95,6 +95,7 @@ export async function POST(request: NextRequest) {
     // Send email notification via Resend
     try {
       const isQuoteRequest = body.moveType === 'Quote Request';
+      const resend = new Resend(process.env.RESEND_API_KEY);
 
       await resend.emails.send({
         from: 'onboarding@resend.dev',
